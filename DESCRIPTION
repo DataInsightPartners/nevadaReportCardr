@@ -1,0 +1,21 @@
+Package: nevadaReportCardr
+Type: Package
+Title: Connect to Nevada Report Card API
+Version: 0.1.0
+Author: Nathan Trenholm [aut, cre]
+Maintainer: Nathan Trenholm <nathan@DataInsightPartners.com>
+URL: https://github.com/DataInsightPartners/nevadaReportCardr
+BugReports: https://github.com/DataInsightPartners/nevadaReportCardr/issues
+Description: Contains Nevada Report Card data sets and provides functions to connect to the Nevada Report Card API and pull data.
+Depends: R (>= 3.4.0)
+Imports:
+  RCurl,
+  RJSONIO,
+  plyr (>= 1.8.4),
+  dplyr (>= 0.7.2),
+  readr (>= 1.1.1),
+  stringr (>= 1.2.0)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
