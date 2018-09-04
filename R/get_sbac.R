@@ -42,13 +42,13 @@ get_sbac <- function(org_ids, spring_years = 2016:2017, grades = 3:8) {
   }
 
   # Check that valid years were provided
-  valid_years <- 2016:2017
+  valid_years <- 2016:2018
 
-  if (is.null(spring_years)) return(stop("Invalid spring_years provided. Must be 2016 or 2017."))
+  if (is.null(spring_years)) return(stop("Invalid spring_years provided. Must be 2016 through 2018."))
 
   for (year in spring_years) {
     if (!year %in% valid_years) {
-      return(stop("Invalid spring_years provided. Must be 2016 or 2017."))
+      return(stop("Invalid spring_years provided. Must be 2016 through 2018."))
     }
   }
 
