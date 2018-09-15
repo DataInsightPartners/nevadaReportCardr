@@ -25,19 +25,19 @@ Available Data Sets
 
 This package comes with most available data from Nevada Report Card already contained within the package. This data is available at the school, district, and state levels.  Here are the available data sets available once you install and load the package:
 
-* `nrc_act` - ACT results from the 2015-2016 and 2016-2017 school years.
-* `nrc_cohort_data` - Cohort graduation data for the classes of 2011 through 2016.
-* `nrc_cte` - Career and Technical Education data for school years 2007-2008 through 2016-2017.
-* `nrc_demographics` - Counts and rates of enrollment demographics for school years 2003-2004 through 2016-2017.
+* `nrc_act` - ACT results from the 2015-2016, 2016-2017, and 2017-2018 school years.
+* `nrc_cohort_data` - Cohort graduation data for the classes of 2011 through 2017.
+* `nrc_cte` - Career and Technical Education data for school years 2007-2008 through 2017-2018.
+* `nrc_demographics` - Counts and rates of enrollment demographics for school years 2003-2004 through 2017-2018.
 * `nrc_domains` - Information about the domains of data available throught the Nevada Report Card API.
-* `nrc_fiscal` - Fiscal information for school years 2006-2007 through 2015-2016. This data is reported for the year prior. The data set contains both the accountability year and the report year.  The report year is the year for which the data is being reported.
+* `nrc_fiscal` - Fiscal information for school years 2006-2007 through 2016-2017. This data is reported for the year prior. The data set contains both the accountability year and the report year.  The report year is the year for which the data is being reported.
 * `nrc_orgs` - Contains the organization information for the organizations (schools, districts, state) contained within Nevada Report Card.
-* `nrc_personnel` - Personnel data for the school years 2003-2004 through 2016-2017.
-* `nrc_profiles` - Profile data for the organizations (schools, districts, state) for the school years 2006-2007 through 2016-2017.
-* `nrc_sbac` - SBAC assessment data for school years 2015-2016 and 2016-2017 (those are the only two years for which data currently exists).
+* `nrc_personnel` - Personnel data for the school years 2003-2004 through 2017-2018.
+* `nrc_profiles` - Profile data for the organizations (schools, districts, state) for the school years 2006-2007 through 2017-2018.
+* `nrc_sbac` - SBAC assessment data for school years 2015-2016 through 2017-2018.
 * `nrc_scopes` - Information about the scopes of data available in the Nevada Report Card API.
-* `nrc_student` - Contains the data from the Student report on Nevada Report Card. Contains data such as Average Daily Attendance (ada), student teacher ratios, average class sizes, retention rates, credit deficiency, transciency rates, higher education remediation rates, and discipline data. This data set contains data for the school years 2003-2004 through 2016-2017.
-* `nrc_technology` - Information regarding the counts of technology devices available to students for the school years 2011-2012 through 2016-2017.
+* `nrc_student` - Contains the data from the Student report on Nevada Report Card. Contains data such as Average Daily Attendance (ada), student teacher ratios, average class sizes, retention rates, credit deficiency, transciency rates, higher education remediation rates, and discipline data. This data set contains data for the school years 2003-2004 through 2017-2018.
+* `nrc_technology` - Information regarding the counts of technology devices available to students for the school years 2011-2012 through 2017-2018.
 
 #### Use Cases
 
