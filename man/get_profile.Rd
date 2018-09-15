@@ -4,7 +4,7 @@
 \alias{get_profile}
 \title{get_profile}
 \usage{
-get_profile(org_id, spring_year = 2017)
+get_profile(org_id, spring_year = 2018)
 }
 \arguments{
 \item{org_id}{A single NRC organization id. You can look them up for a school or

@@ -4,7 +4,7 @@
 \alias{get_personnel}
 \title{get_personnel}
 \usage{
-get_personnel(org_ids, spring_years = 2017)
+get_personnel(org_ids, spring_years = 2018)
 }
 \arguments{
 \item{org_ids}{A numeric vector of NRC organization ids. You can look them up for a school or

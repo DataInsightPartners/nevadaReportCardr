@@ -28,7 +28,7 @@
 #' # Get personnel data for the state for all years.
 #' state_personnel <- get_personnel(64825, 2004:2016)
 
-get_personnel <- function(org_ids, spring_years = 2017) {
+get_personnel <- function(org_ids, spring_years = 2018) {
 
   # Check that valid org_ids were provided
   valid_ids <- nrc_orgs$id
@@ -42,13 +42,13 @@ get_personnel <- function(org_ids, spring_years = 2017) {
   }
 
   # Check that valid years were provided
-  valid_years <- 2004:2017
+  valid_years <- 2004:2018
 
-  if (is.null(spring_years)) return(stop("Invalid spring_years provided. Must be 2004 through 2017."))
+  if (is.null(spring_years)) return(stop("Invalid spring_years provided. Must be 2004 through 2018."))
 
   for (year in spring_years) {
     if (!year %in% valid_years) {
-      return(stop("Invalid spring_years provided. Must be 2004 through 2017."))
+      return(stop("Invalid spring_years provided. Must be 2004 through 2018."))
     }
   }
 

@@ -17,12 +17,12 @@
 #' forbuss_org_id <- get_org_id('forbuss')$org_id
 #' forbuss_profile <- get_profile(org_id = forbuss_org_id, spring_year = 2014)
 
-get_profile <- function(org_id, spring_year = 2017) {
+get_profile <- function(org_id, spring_year = 2018) {
 
   # Check that a valid org_id was provided
   valid_ids <- nrc_orgs$id
 
-  if (is.null(org_ids)) return(stop("Invalid org_ids provided. Must be an id or ids from nrc_orgs."))
+  if (is.null(org_id)) return(stop("Invalid org_ids provided. Must be an id from nrc_orgs."))
 
   if (length(org_id) != 1) return(stop("Invalid org_ids provided. Only a single id from nrc_orgs may be provided."))
 
@@ -52,13 +52,13 @@ get_profile <- function(org_id, spring_year = 2017) {
   return(prof.df)
 }
 
+
 # profiles <- dplyr::data_frame(name = character())
 #
-# for (year in 2015:2016) {
 #   for (id in nrc_orgs$id) {
-#     profile <- get_profile(id, year)
+#     profile <- get_profile(id, 2018)
 #     if (profile != 'No Data.') {
 #       profiles <- dplyr::bind_rows(profiles, profile)
 #     }
 #   }
-# }
+

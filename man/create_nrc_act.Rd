@@ -15,7 +15,7 @@ create_nrc_act creates a data frame with all ACT results and includes state_id, 
    with the organization api data.
 }
 \details{
-All of the data, through 2017, that can be pulled by this function is already available in
+All of the data, through 2018, that can be pulled by this function is already available in
    a data frame `nrc_act` that comes with the nrc package; View(nrc_act). This function was
    used to create that data frame.
 }

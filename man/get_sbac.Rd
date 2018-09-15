@@ -4,7 +4,7 @@
 \alias{get_sbac}
 \title{get_sbac}
 \usage{
-get_sbac(org_ids, spring_years = 2016:2017, grades = 3:8)
+get_sbac(org_ids, spring_years = 2016:2018, grades = 3:8)
 }
 \arguments{
 \item{org_ids}{A numeric vector of NRC organization ids. You can look them up for a school or
@@ -27,7 +27,7 @@ get_sbac retrieves SBAC results from the Nevada Report Card (NRC) API
 WARNING: There are no ids provided with the data extract and there are instances of school
    names that match across school districts.
 
-All of the data, through 2017, that can be pulled by this function is already available in
+All of the data, through 2018, that can be pulled by this function is already available in
    a data frame `nrc_sbac` that comes with the nrc package; View(nrc_sbac). This function along
    with `create_nrc_sbac` was used to create that data frame. That data includes state_id,
    org_id, and type.

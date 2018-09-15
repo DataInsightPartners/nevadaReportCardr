@@ -44,7 +44,7 @@
 #' state_frl_ell <- get_sbac_subgroup(org_ids = state_id, frl = 'Y', ell = 'Y')
 
 
-get_sbac_subgroup <- function(org_ids, spring_years = 2016:2017, grades = 3:8, ethnicities = NULL, gender = NULL, iep = NULL, frl = NULL, ell = NULL, condition = 'and') {
+get_sbac_subgroup <- function(org_ids, spring_years = 2016:2018, grades = 3:8, ethnicities = NULL, gender = NULL, iep = NULL, frl = NULL, ell = NULL, condition = 'and') {
 
   # Check that valid org_ids were provided
   valid_ids <- nrc_orgs$id
@@ -58,9 +58,9 @@ get_sbac_subgroup <- function(org_ids, spring_years = 2016:2017, grades = 3:8, e
   }
 
   # Check that valid years were provided
-  valid_years <- 2016:2017
+  valid_years <- 2016:2018
 
-  if (is.null(spring_years)) return(stop("Invalid spring_years provided. Must be 2016 or 2017."))
+  if (is.null(spring_years)) return(stop("Invalid spring_years provided. Must be 2016 through 2018."))
 
   for (year in spring_years) {
     if (!year %in% valid_years) {
@@ -69,13 +69,13 @@ get_sbac_subgroup <- function(org_ids, spring_years = 2016:2017, grades = 3:8, e
   }
 
   # Check that valid years were provided
-  valid_years <- 2016:2017
+  valid_years <- 2016:2018
 
-  if (is.null(spring_years)) return(stop("Invalid spring_years provided. Must be 2016 or 2017."))
+  if (is.null(spring_years)) return(stop("Invalid spring_years provided. Must be 2016 through 2018."))
 
   for (year in spring_years) {
     if (!year %in% valid_years) {
-      return(stop("Invalid spring_years provided. Must be 2016 or 2017."))
+      return(stop("Invalid spring_years provided. Must be 2016 through 2018."))
     }
   }
 

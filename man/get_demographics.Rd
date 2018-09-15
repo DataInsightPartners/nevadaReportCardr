@@ -4,7 +4,7 @@
 \alias{get_demographics}
 \title{get_demographics}
 \usage{
-get_demographics(org_ids, spring_years = 2004:2017)
+get_demographics(org_ids, spring_years = 2004:2018)
 }
 \arguments{
 \item{org_ids}{A numeric vector of NRC organization ids. You can look them up for a school or

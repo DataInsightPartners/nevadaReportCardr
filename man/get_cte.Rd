@@ -4,7 +4,7 @@
 \alias{get_cte}
 \title{get_cte}
 \usage{
-get_cte(org_ids, spring_years = 2008:2017)
+get_cte(org_ids, spring_years = 2008:2018)
 }
 \arguments{
 \item{org_ids}{A numeric vector of NRC organization ids. You can look them up for a school or

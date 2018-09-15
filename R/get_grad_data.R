@@ -27,7 +27,7 @@
 #' # Get grad data for the state for all years.
 #' state_grad <- get_grad_data(64825, 2011:2016)
 
-get_grad_data <- function(org_ids, class_of_years = 2016) {
+get_grad_data <- function(org_ids, class_of_years = 2017) {
 
   # Check that valid org_ids were provided
   valid_ids <- nrc_orgs$id
@@ -41,13 +41,13 @@ get_grad_data <- function(org_ids, class_of_years = 2016) {
   }
 
   # Check that valid years were provided
-  valid_years <- 2011:2016
+  valid_years <- 2011:2017
 
-  if (is.null(class_of_years)) return(stop("Invalid class_of_years provided. Must be 2011 through 2016."))
+  if (is.null(class_of_years)) return(stop("Invalid class_of_years provided. Must be 2011 through 2017."))
 
   for (year in class_of_years) {
     if (!year %in% valid_years) {
-      return(stop("Invalid class_of_years provided. Must be 2011 through 2016."))
+      return(stop("Invalid class_of_years provided. Must be 2011 through 2017."))
     }
   }
 
@@ -71,7 +71,7 @@ get_grad_data <- function(org_ids, class_of_years = 2016) {
   results_df <- dplyr::as_data_frame(readr::read_csv(resultsText)) %>%
     dplyr::select(name = Name,
            accountability_year = `Accountability Year`,
-           class_of = `Class Of`,
+           class_of = `Graduating Class of`,
            school_levels = `School Levels`,
            organization_id = `Organization ID`,
            organization_level = `Organization Level`,
@@ -237,7 +237,11 @@ get_grad_data <- function(org_ids, class_of_years = 2016) {
            standard_diploma_count_all = `Standard Diploma #`,
            standard_diploma_rate_all = `Standard Diploma %`,
            hse_count_all = `HSE #`,
-           hse_rate_all = `HSE %`)
+           hse_rate_all = `HSE %`) %>%
+    dplyr::rowwise() %>%
+    # Remove the dash and id number from the name.
+    dplyr::mutate(name = ifelse(stringr::str_detect(name, ' - [0-9]'),
+                                stringr::str_sub(name, 1, stringr::str_locate(name, ' - [0-9]')[1] - 1), name))
 
   # Convert the pertinent columns to numeric.
   results_df[,8:ncol(results_df)] <- sapply(results_df[, 8:ncol(results_df)], as.numeric)

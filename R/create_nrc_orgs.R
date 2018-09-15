@@ -45,18 +45,12 @@ create_nrc_orgs <- function() {
 
   # Add in the grade levels.
   orgs_df <- dplyr::left_join(orgs_df,
-                              dplyr::filter(nrc_demographics, accountability_year == '2016-2017') %>%
+                              dplyr::filter(nrc_demographics, accountability_year == '2017-2018') %>%
                                 dplyr::rowwise() %>%
                                 dplyr::mutate(state_id = ifelse(nchar(state_id) == 1 | nchar(state_id) == 4,
                                                         paste0('0',state_id), as.character(state_id))) %>%
                                 dplyr::select(school_levels, organization_level, state_id))
 
-  # Equipo & SLAM were not designated a charter school.
-  orgs_df$organization_level[orgs_df$state_id == 18433] <- 'State Public Charter Schools'
-  orgs_df$organization_level[orgs_df$state_id == 18434] <- 'State Public Charter Schools'
-
-  # Create a column to indicate charter school.
-  orgs_df$charter <- ifelse(grepl('charter', orgs_df$organization_level, ignore.case = TRUE),1, 0)
 
   return(orgs_df)
 }

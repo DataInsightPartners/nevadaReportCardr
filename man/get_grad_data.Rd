@@ -4,7 +4,7 @@
 \alias{get_grad_data}
 \title{get_grad_data}
 \usage{
-get_grad_data(org_ids, class_of_years = 2016)
+get_grad_data(org_ids, class_of_years = 2017)
 }
 \arguments{
 \item{org_ids}{A numeric vector of NRC organization ids. You can look them up for a school or

@@ -34,17 +34,20 @@ create_nrc_sbac <- function() {
              state_id,
              name,
              type,
-             district,
-             charter)
+             district)
     # Retrive the SBAC data from the API for the current district and schools.
     dist_sbac <- get_sbac(dist_meta$org_id)
 
-    # Join the SBAC data and meta data.
-    dist_sbac <- inner_join(dist_sbac, dist_meta,
-                            by = c('name' = 'name'))
+    # Make sure the distict has SBAC data.
+    if (nrow(dist_sbac) > 0) {
+      # Join the SBAC data and meta data.
+      dist_sbac <- inner_join(dist_sbac, dist_meta,
+                              by = c('name' = 'name'))
 
-    # Append the results to the data frame that will ultimately be returned by the main function.
-    nrc_sbac <- bind_rows(nrc_sbac, dist_sbac)
+      # Append the results to the data frame that will ultimately be returned by the main function.
+      nrc_sbac <- bind_rows(nrc_sbac, dist_sbac)
+    }
+
   }
 
   # Pull the state meta data (org_id, state_id, and type) to be joined to the state SBAC results.
@@ -53,8 +56,7 @@ create_nrc_sbac <- function() {
            state_id,
            name,
            type,
-           district,
-           charter)
+           district)
 
   # Retrieve the state SBAC results.
   state_sbac <- get_sbac(state_meta$org_id)

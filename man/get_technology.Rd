@@ -4,7 +4,7 @@
 \alias{get_technology}
 \title{get_technology}
 \usage{
-get_technology(org_ids, spring_years = 2012:2017)
+get_technology(org_ids, spring_years = 2012:2018)
 }
 \arguments{
 \item{org_ids}{A numeric vector of NRC organization ids. You can look them up for a school or

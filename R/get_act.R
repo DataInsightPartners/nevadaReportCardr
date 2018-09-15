@@ -5,7 +5,7 @@
 #'    WARNING: There are no ids provided with the data extract and there are instances of school
 #'    names that match across school districts.
 #'
-#'    All of the data, through 2017, that can be pulled by this function is already available in
+#'    All of the data, through 2018, that can be pulled by this function is already available in
 #'    a data frame `nrc_act` that comes with the nrc package; View(nrc_act). This function along
 #'    with `create_nrc_act` was used to create that data frame. That data includes state_id,
 #'    org_id, and type.
@@ -27,7 +27,7 @@
 #' get_act(nrc_orgs$id[nrc_orgs$type == 'D'], spring_years = 2016)
 
 
-get_act <- function(org_ids, spring_years = 2016:2017) {
+get_act <- function(org_ids, spring_years = 2016:2018) {
 
   # Check that valid org_ids were provided
   valid_ids <- nrc_orgs$id
@@ -41,13 +41,13 @@ get_act <- function(org_ids, spring_years = 2016:2017) {
   }
 
   # Check that valid years were provided
-  valid_years <- 2016:2017
+  valid_years <- 2016:2018
 
-  if (is.null(spring_years)) return(stop("Invalid spring_years provided. Must be 2016 or 2017."))
+  if (is.null(spring_years)) return(stop("Invalid spring_years provided. Must be 2016 through 2018."))
 
   for (year in spring_years) {
     if (!year %in% valid_years) {
-      return(stop("Invalid spring_years provided. Must be 2016 or 2017."))
+      return(stop("Invalid spring_years provided. Must be 2016 through 2018."))
     }
   }
 

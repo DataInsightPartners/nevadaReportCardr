@@ -4,7 +4,7 @@
 \alias{get_sbac_subgroup}
 \title{get_sbac_subgroup}
 \usage{
-get_sbac_subgroup(org_ids, spring_years = 2016:2017, grades = 3:8,
+get_sbac_subgroup(org_ids, spring_years = 2016:2018, grades = 3:8,
   ethnicities = NULL, gender = NULL, iep = NULL, frl = NULL,
   ell = NULL, condition = "and")
 }

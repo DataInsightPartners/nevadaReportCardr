@@ -4,7 +4,7 @@
 \alias{get_act}
 \title{get_act}
 \usage{
-get_act(org_ids, spring_years = 2016:2017)
+get_act(org_ids, spring_years = 2016:2018)
 }
 \arguments{
 \item{org_ids}{A numeric vector of NRC organization ids. You can look them up for a school or
@@ -25,7 +25,7 @@ get_act retrieves ACT results from the Nevada Report Card (NRC) API
 WARNING: There are no ids provided with the data extract and there are instances of school
    names that match across school districts.
 
-All of the data, through 2017, that can be pulled by this function is already available in
+All of the data, through 2018, that can be pulled by this function is already available in
    a data frame `nrc_act` that comes with the nrc package; View(nrc_act). This function along
    with `create_nrc_act` was used to create that data frame. That data includes state_id,
    org_id, and type.
